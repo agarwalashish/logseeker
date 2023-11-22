@@ -38,11 +38,16 @@ func (ss *SearchService) Search(request *models.SearchRequest) ([]string, error)
 	filename := request.Filename
 	filename = strings.Replace(filename, "/var/log/", "logs/", 1)
 
-	return getLastLines(filename, lineCount)
+	keywords := []string{}
+	if request.Keywords != "" {
+		keywords = strings.Split(request.Keywords, " ")
+	}
+
+	return SearchFile(filename, lineCount, keywords)
 }
 
-// getLastLines reads the last 'lineCount' lines from a file.
-func getLastLines(filename string, lineCount int) ([]string, error) {
+// SearchFile searches for keywords in the lines from a file
+func SearchFile(filename string, lineCount int, keywords []string) ([]string, error) {
 	// Check if file exists before opening it
 	fileInfo, err := os.Stat(filename)
 	if os.IsNotExist(err) {
@@ -56,67 +61,83 @@ func getLastLines(filename string, lineCount int) ([]string, error) {
 	}
 	defer file.Close()
 
-	// Buffer to hold the chunk being read
-	buffer := make([]byte, chunkSize)
-
-	// Slice to store the last lines
-	lines := make([]string, 0, lineCount)
-
 	fileSize := fileInfo.Size()
 	if fileSize == 0 {
 		return nil, eris.New("file is empty")
 	}
 
-	// Move the file pointer to the end of the file as the newest lines are at the end of the file
-	file.Seek(0, io.SeekEnd)
+	var lines []string
+	var partialLine string
+	var currentPos int64 = fileSize
 
-	// Read the file in chunks starting from the end of the file
-	for fileSize > 0 {
-		var offset int64
-		// If the remaining file size is smaller than the chunk size,
-		// adjust the chunk size and seek position accordingly.
-		if fileSize < chunkSize {
-			offset, err = file.Seek(-fileSize, io.SeekCurrent)
-			buffer = buffer[:fileSize]
-		} else {
-			offset, err = file.Seek(-chunkSize, io.SeekCurrent)
+	for currentPos > 0 {
+		var startPos int64
+		var sizeToRead int64 = chunkSize
+
+		// Adjust the chunk size if we are near the start of the file
+		if currentPos < chunkSize {
+			sizeToRead = currentPos
 		}
+		startPos = currentPos - sizeToRead
+
+		// Create a buffer to hold the data read from the file
+		buffer := make([]byte, sizeToRead)
+		_, err := file.Seek(startPos, io.SeekStart)
+		if err != nil {
+			return nil, err
+		}
+		_, err = file.Read(buffer)
 		if err != nil {
 			return nil, err
 		}
 
-		// Read the chunk into the buffer
-		_, err = file.Read(buffer)
-		if err != nil && err != io.EOF {
-			return nil, err
-		}
+		// Update the current position in the file
+		currentPos -= sizeToRead
+		buffer = append(buffer, partialLine...)
 
-		// Process the chunk to extract lines
 		for i := len(buffer) - 1; i >= 0; i-- {
 			// Check for newline characters to identify lines
 			if buffer[i] == '\n' {
-				// Prepend the line to the lines slice
-				lines = append([]string{string(buffer[i+1:])}, lines...)
+				line := string(buffer[i+1:])
+				if len(line) > 0 {
+					// Check if the keywords are present in the line
+					if checkForKeywords(line, keywords) {
+						// Prepend the line to the lines slice
+						lines = append(lines, []string{line}...)
+					}
+				}
 				buffer = buffer[:i]
-
-				// Stop if required number of lines have been collected
 				if len(lines) >= lineCount {
 					return lines, nil
 				}
 			}
 		}
 
-		// Seek back to the start of the chunk
-		file.Seek(offset, io.SeekStart)
-
-		// Update the remaining file size
-		fileSize -= chunkSize
+		partialLine = string(buffer)
 	}
 
-	// If there's any remaining data in the buffer, treat it as the first line.
-	if len(buffer) > 0 {
-		lines = append([]string{string(buffer)}, lines...)
+	if partialLine != "" && len(lines) < lineCount && checkForKeywords(partialLine, keywords) {
+		lines = append(lines, []string{partialLine}...)
 	}
 
 	return lines, nil
+}
+
+// Check if one of the keywords exists in the line
+func checkForKeywords(line string, keywords []string) bool {
+	if len(keywords) == 0 {
+		return true
+	}
+	m := map[string]bool{}
+	for _, keyword := range keywords {
+		m[strings.ToLower(keyword)] = false
+	}
+	words := strings.Split(line, " ")
+	for _, word := range words {
+		if _, ok := m[strings.ToLower(word)]; ok {
+			return true
+		}
+	}
+
+	return false
 }
