@@ -9,7 +9,7 @@ import (
 
 func main() {
 	router := setupRouter()
-	http.ListenAndServe(":3000", router)
+	http.ListenAndServe(":8080", router)
 }
 
 func setupRouter() *chi.Mux {

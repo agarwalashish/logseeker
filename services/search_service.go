@@ -35,10 +35,10 @@ func (ss *SearchService) Search(request *models.SearchRequest) ([]string, error)
 		lineCount = request.NumLines
 	}
 
-	filename := request.Filename
-	filename = strings.Replace(filename, "/var/log/", "logs/", 1)
+	// filename := request.Filename
+	// filename = strings.Replace(filename, "/var/log/", "/app/logs/", 1)
 
-	return SearchFile(filename, lineCount, request.Keywords)
+	return SearchFile(request.Filename, lineCount, request.Keywords)
 }
 
 // SearchFile searches for keywords in the lines from a file
