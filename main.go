@@ -1,8 +1,8 @@
 package main
 
 import (
+	"logseeker/handlers"
 	"net/http"
-	"voltron/handlers"
 
 	"github.com/go-chi/chi/v5"
 )
@@ -15,7 +15,7 @@ func main() {
 func setupRouter() *chi.Mux {
 	r := chi.NewRouter()
 
-	logsHandler := handlers.NewLogsHandler()
+	var logsHandler handlers.LogsHandlerInterface = handlers.NewLogsHandler()
 	r.Route("/logs", func(r chi.Router) {
 		r.Post("/search", logsHandler.SearchRequest)
 	})

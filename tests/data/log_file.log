@@ -1,0 +1,500 @@
+Nov 17 22:05:23 server kernel[4004]: Error encountered
+Nov 17 22:05:44 server kernel[6999]: User logged in
+Nov 17 22:07:26 server cron[2266]: User logged in
+Nov 17 22:09:42 server sshd[5267]: User logged in
+Nov 17 22:12:01 server cron[2778]: Process started
+Nov 17 22:11:33 server systemd[8880]: Configuration updated
+Nov 17 22:13:09 server systemd[9491]: User logged in
+Nov 17 22:15:03 server systemd[8913]: Configuration updated
+Nov 17 22:17:13 server systemd[6408]: Error encountered
+Nov 17 22:18:55 server sshd[9323]: Service restarted
+Nov 17 22:19:09 server sshd[9750]: Error encountered
+Nov 17 22:19:13 server cron[6691]: Configuration updated
+Nov 17 22:21:15 server kernel[1590]: Error encountered
+Nov 17 22:21:51 server sshd[2933]: Process started
+Nov 17 22:23:06 server kernel[7717]: Error encountered
+Nov 17 22:24:16 server sshd[2642]: Service restarted
+Nov 17 22:26:05 server sshd[5341]: User logged in
+Nov 17 22:26:13 server sshd[5180]: Connection established
+Nov 17 22:27:20 server kernel[7234]: Configuration updated
+Nov 17 22:26:36 server systemd[8724]: User logged in
+Nov 17 22:27:52 server systemd[4239]: Service restarted
+Nov 17 22:29:37 server systemd[7479]: Process started
+Nov 17 22:29:37 server cron[6456]: User logged in
+Nov 17 22:31:39 server systemd[4826]: Service restarted
+Nov 17 22:33:05 server sshd[5998]: Error encountered
+Nov 17 22:34:45 server cron[9297]: Service restarted
+Nov 17 22:34:51 server kernel[3810]: Service restarted
+Nov 17 22:37:10 server systemd[9266]: Process started
+Nov 17 22:36:53 server kernel[4882]: Error encountered
+Nov 17 22:39:00 server cron[8689]: Service restarted
+Nov 17 22:39:27 server cron[7573]: Service restarted
+Nov 17 22:39:47 server kernel[1286]: User logged in
+Nov 17 22:39:48 server systemd[5592]: Service restarted
+Nov 17 22:41:05 server kernel[2801]: Connection established
+Nov 17 22:42:47 server sshd[1270]: User logged in
+Nov 17 22:42:59 server cron[2927]: Error encountered
+Nov 17 22:44:18 server sshd[4626]: Error encountered
+Nov 17 22:45:16 server sshd[1146]: Configuration updated
+Nov 17 22:46:34 server cron[9994]: User logged in
+Nov 17 22:47:39 server cron[4782]: Process started
+Nov 17 22:48:57 server sshd[3206]: Process started
+Nov 17 22:49:50 server sshd[7480]: Error encountered
+Nov 17 22:51:07 server systemd[4148]: Connection established
+Nov 17 22:52:03 server systemd[4576]: Configuration updated
+Nov 17 22:52:18 server cron[4222]: Error encountered
+Nov 17 22:54:16 server kernel[9323]: Process started
+Nov 17 22:53:49 server sshd[5958]: Error encountered
+Nov 17 22:54:33 server cron[5999]: Service restarted
+Nov 17 22:55:28 server sshd[6701]: Error encountered
+Nov 17 22:58:29 server cron[3696]: Process started
+Nov 17 22:56:47 server sshd[7601]: Process started
+Nov 17 22:59:46 server systemd[9254]: Service restarted
+Nov 17 22:59:08 server systemd[9691]: Connection established
+Nov 17 23:01:10 server sshd[8438]: Error encountered
+Nov 17 23:02:21 server sshd[5327]: Process started
+Nov 17 23:04:27 server cron[9358]: Process started
+Nov 17 23:04:39 server cron[2336]: Service restarted
+Nov 17 23:06:12 server kernel[5840]: User logged in
+Nov 17 23:08:09 server sshd[8633]: Service restarted
+Nov 17 23:08:31 server systemd[6879]: User logged in
+Nov 17 23:10:39 server kernel[1069]: Connection established
+Nov 17 23:10:39 server systemd[7315]: Error encountered
+Nov 17 23:12:53 server systemd[4131]: User logged in
+Nov 17 23:13:34 server kernel[8837]: Configuration updated
+Nov 17 23:12:51 server kernel[4139]: Process started
+Nov 17 23:14:15 server sshd[1298]: Process started
+Nov 17 23:16:02 server sshd[7483]: User logged in
+Nov 17 23:17:34 server systemd[4754]: Service restarted
+Nov 17 23:18:39 server cron[4706]: Configuration updated
+Nov 17 23:19:35 server sshd[9384]: User logged in
+Nov 17 23:19:21 server cron[9624]: Connection established
+Nov 17 23:20:59 server sshd[5899]: Service restarted
+Nov 17 23:22:07 server kernel[6137]: Error encountered
+Nov 17 23:24:26 server sshd[5039]: User logged in
+Nov 17 23:25:42 server kernel[2065]: User logged in
+Nov 17 23:27:28 server cron[6483]: Error encountered
+Nov 17 23:27:35 server systemd[8291]: Configuration updated
+Nov 17 23:28:22 server sshd[9331]: User logged in
+Nov 17 23:30:15 server systemd[8183]: Process started
+Nov 17 23:30:43 server kernel[4559]: Configuration updated
+Nov 17 23:30:53 server systemd[6334]: Error encountered
+Nov 17 23:31:29 server cron[4297]: User logged in
+Nov 17 23:33:16 server systemd[5464]: Error encountered
+Nov 17 23:33:33 server systemd[8012]: Error encountered
+Nov 17 23:35:15 server systemd[9302]: User logged in
+Nov 17 23:35:23 server sshd[9310]: Service restarted
+Nov 17 23:37:10 server kernel[4759]: Connection established
+Nov 17 23:38:25 server systemd[7719]: User logged in
+Nov 17 23:38:42 server cron[5658]: User logged in
+Nov 17 23:38:09 server kernel[6302]: Connection established
+Nov 17 23:38:40 server sshd[6280]: Service restarted
+Nov 17 23:39:11 server sshd[7628]: Connection established
+Nov 17 23:42:02 server kernel[8156]: Configuration updated
+Nov 17 23:42:19 server systemd[3158]: Configuration updated
+Nov 17 23:43:05 server cron[9823]: Process started
+Nov 17 23:43:36 server kernel[5013]: Process started
+Nov 17 23:46:39 server sshd[9631]: User logged in
+Nov 17 23:45:58 server kernel[1516]: User logged in
+Nov 17 23:45:55 server kernel[8072]: Service restarted
+Nov 17 23:47:34 server sshd[4237]: Configuration updated
+Nov 17 23:48:33 server kernel[6864]: Error encountered
+Nov 17 23:48:50 server kernel[6692]: Process started
+Nov 17 23:50:15 server kernel[1709]: Process started
+Nov 17 23:52:01 server systemd[6273]: Configuration updated
+Nov 17 23:54:55 server systemd[3792]: Error encountered
+Nov 17 23:55:04 server kernel[6115]: User logged in
+Nov 17 23:55:49 server systemd[5048]: Error encountered
+Nov 17 23:57:43 server kernel[4843]: Error encountered
+Nov 17 23:58:30 server systemd[4876]: Connection established
+Nov 17 23:59:50 server systemd[2434]: Connection established
+Nov 17 23:59:17 server systemd[3186]: Error encountered
+Nov 18 00:02:05 server systemd[9830]: Process started
+Nov 18 00:01:34 server cron[7841]: Service restarted
+Nov 18 00:04:05 server systemd[4523]: Error encountered
+Nov 18 00:03:54 server kernel[8458]: Connection established
+Nov 18 00:04:31 server sshd[9013]: Configuration updated
+Nov 18 00:06:12 server sshd[7623]: User logged in
+Nov 18 00:06:58 server cron[9394]: Error encountered
+Nov 18 00:07:48 server sshd[5422]: User logged in
+Nov 18 00:08:09 server sshd[3362]: Configuration updated
+Nov 18 00:08:07 server cron[1392]: Error encountered
+Nov 18 00:09:36 server sshd[3777]: Service restarted
+Nov 18 00:10:06 server cron[8425]: Configuration updated
+Nov 18 00:11:10 server kernel[8503]: User logged in
+Nov 18 00:11:52 server sshd[9167]: Process started
+Nov 18 00:12:23 server cron[2653]: Error encountered
+Nov 18 00:13:20 server sshd[2558]: User logged in
+Nov 18 00:14:09 server cron[5166]: Connection established
+Nov 18 00:15:57 server systemd[3414]: Configuration updated
+Nov 18 00:16:09 server kernel[6113]: Error encountered
+Nov 18 00:18:55 server cron[4839]: Error encountered
+Nov 18 00:18:28 server kernel[6912]: Connection established
+Nov 18 00:20:33 server systemd[2197]: Connection established
+Nov 18 00:22:11 server systemd[6817]: Configuration updated
+Nov 18 00:24:25 server sshd[5645]: Service restarted
+Nov 18 00:24:40 server kernel[2698]: Error encountered
+Nov 18 00:27:36 server kernel[9945]: Process started
+Nov 18 00:26:51 server sshd[3980]: User logged in
+Nov 18 00:27:37 server sshd[8241]: Process started
+Nov 18 00:29:17 server systemd[3785]: Connection established
+Nov 18 00:30:18 server systemd[5612]: Configuration updated
+Nov 18 00:31:00 server kernel[5641]: User logged in
+Nov 18 00:32:40 server cron[2787]: User logged in
+Nov 18 00:33:50 server systemd[4895]: Service restarted
+Nov 18 00:34:39 server kernel[7615]: Service restarted
+Nov 18 00:36:14 server cron[4004]: User logged in
+Nov 18 00:37:25 server sshd[1164]: Error encountered
+Nov 18 00:38:33 server cron[9301]: Process started
+Nov 18 00:39:41 server sshd[6548]: Process started
+Nov 18 00:40:20 server kernel[1723]: Error encountered
+Nov 18 00:40:40 server cron[7143]: Configuration updated
+Nov 18 00:42:02 server systemd[1076]: Process started
+Nov 18 00:41:35 server systemd[2174]: User logged in
+Nov 18 00:43:17 server sshd[2497]: Connection established
+Nov 18 00:43:15 server kernel[9744]: Service restarted
+Nov 18 00:43:54 server sshd[4250]: Error encountered
+Nov 18 00:44:23 server kernel[4942]: Connection established
+Nov 18 00:45:28 server cron[5136]: User logged in
+Nov 18 00:46:49 server systemd[9333]: Process started
+Nov 18 00:47:08 server systemd[9739]: Service restarted
+Nov 18 00:48:07 server kernel[6045]: Error encountered
+Nov 18 00:49:50 server sshd[3557]: Service restarted
+Nov 18 00:50:37 server sshd[2444]: Error encountered
+Nov 18 00:50:50 server cron[7851]: Service restarted
+Nov 18 00:51:55 server sshd[3967]: Error encountered
+Nov 18 00:54:49 server cron[8641]: User logged in
+Nov 18 00:54:18 server sshd[4683]: Configuration updated
+Nov 18 00:55:28 server kernel[3937]: Configuration updated
+Nov 18 00:56:46 server kernel[7851]: Service restarted
+Nov 18 00:57:29 server cron[4553]: Process started
+Nov 18 00:57:43 server sshd[8411]: Configuration updated
+Nov 18 00:58:39 server sshd[7071]: Connection established
+Nov 18 00:59:29 server cron[6734]: Configuration updated
+Nov 18 01:00:15 server cron[3313]: User logged in
+Nov 18 01:00:19 server cron[9795]: User logged in
+Nov 18 01:01:15 server systemd[6335]: Configuration updated
+Nov 18 01:02:02 server sshd[6158]: Connection established
+Nov 18 01:02:00 server kernel[9816]: Connection established
+Nov 18 01:03:23 server sshd[9199]: User logged in
+Nov 18 01:05:06 server sshd[8838]: Service restarted
+Nov 18 01:07:15 server sshd[7118]: Connection established
+Nov 18 01:07:20 server cron[5970]: Process started
+Nov 18 01:08:17 server cron[6748]: User logged in
+Nov 18 01:10:12 server systemd[4347]: User logged in
+Nov 18 01:09:16 server cron[4452]: User logged in
+Nov 18 01:12:39 server cron[4701]: Service restarted
+Nov 18 01:11:52 server kernel[6310]: User logged in
+Nov 18 01:13:58 server systemd[8465]: Process started
+Nov 18 01:14:06 server systemd[9875]: Configuration updated
+Nov 18 01:15:46 server systemd[7498]: Process started
+Nov 18 01:17:44 server kernel[7844]: Process started
+Nov 18 01:17:26 server kernel[4838]: User logged in
+Nov 18 01:18:33 server kernel[7465]: Error encountered
+Nov 18 01:20:06 server systemd[7081]: Configuration updated
+Nov 18 01:22:21 server kernel[9023]: Error encountered
+Nov 18 01:22:24 server systemd[4856]: Service restarted
+Nov 18 01:23:33 server systemd[4931]: Connection established
+Nov 18 01:23:17 server kernel[6123]: Configuration updated
+Nov 18 01:24:25 server kernel[2672]: User logged in
+Nov 18 01:25:11 server kernel[9241]: Error encountered
+Nov 18 01:28:00 server cron[5483]: User logged in
+Nov 18 01:28:54 server cron[5119]: User logged in
+Nov 18 01:30:00 server kernel[8548]: Process started
+Nov 18 01:32:32 server sshd[2309]: Connection established
+Nov 18 01:32:25 server systemd[8862]: User logged in
+Nov 18 01:35:03 server sshd[6945]: Process started
+Nov 18 01:36:14 server sshd[4634]: Configuration updated
+Nov 18 01:37:51 server systemd[7246]: User logged in
+Nov 18 01:37:47 server sshd[8161]: Process started
+Nov 18 01:38:38 server systemd[1149]: Process started
+Nov 18 01:39:02 server sshd[2102]: Connection established
+Nov 18 01:41:29 server cron[4959]: Configuration updated
+Nov 18 01:42:41 server kernel[8915]: Configuration updated
+Nov 18 01:43:12 server systemd[7292]: Error encountered
+Nov 18 01:44:07 server sshd[6133]: Error encountered
+Nov 18 01:45:27 server systemd[7645]: Service restarted
+Nov 18 01:45:39 server sshd[8139]: Configuration updated
+Nov 18 01:47:15 server cron[6294]: Process started
+Nov 18 01:47:15 server sshd[6527]: Connection established
+Nov 18 01:50:01 server sshd[2405]: Service restarted
+Nov 18 01:50:23 server cron[4851]: Error encountered
+Nov 18 01:50:12 server cron[2294]: Service restarted
+Nov 18 01:51:37 server kernel[2431]: Service restarted
+Nov 18 01:50:44 server kernel[4098]: Error encountered
+Nov 18 01:52:34 server cron[5774]: Error encountered
+Nov 18 01:54:44 server systemd[7880]: Error encountered
+Nov 18 01:57:00 server systemd[1785]: Error encountered
+Nov 18 01:56:50 server sshd[7018]: Service restarted
+Nov 18 01:58:31 server systemd[7271]: User logged in
+Nov 18 02:00:13 server sshd[9449]: Connection established
+Nov 18 02:00:24 server cron[9426]: Configuration updated
+Nov 18 02:01:07 server sshd[9580]: Process started
+Nov 18 02:02:07 server sshd[4969]: Process started
+Nov 18 02:02:39 server sshd[6916]: Process started
+Nov 18 02:04:29 server kernel[7271]: Connection established
+Nov 18 02:05:49 server sshd[3408]: Process started
+Nov 18 02:06:45 server cron[9160]: Connection established
+Nov 18 02:06:45 server sshd[4434]: Service restarted
+Nov 18 02:08:03 server systemd[6072]: User logged in
+Nov 18 02:10:00 server kernel[4739]: Error encountered
+Nov 18 02:11:39 server kernel[8340]: Process started
+Nov 18 02:11:54 server systemd[6934]: Process started
+Nov 18 02:13:22 server sshd[9891]: Service restarted
+Nov 18 02:13:56 server systemd[1174]: Configuration updated
+Nov 18 02:16:18 server cron[7823]: Configuration updated
+Nov 18 02:17:52 server sshd[2937]: Connection established
+Nov 18 02:18:02 server cron[3023]: User logged in
+Nov 18 02:20:05 server sshd[6574]: Service restarted
+Nov 18 02:20:09 server cron[7702]: Process started
+Nov 18 02:19:20 server systemd[2975]: Process started
+Nov 18 02:20:13 server cron[4245]: Configuration updated
+Nov 18 02:22:13 server systemd[2152]: Process started
+Nov 18 02:22:17 server sshd[4945]: Process started
+Nov 18 02:24:41 server kernel[2035]: Configuration updated
+Nov 18 02:23:33 server sshd[3666]: Error encountered
+Nov 18 02:25:45 server cron[8334]: Service restarted
+Nov 18 02:27:20 server cron[5591]: Process started
+Nov 18 02:30:39 server sshd[3102]: Process started
+Nov 18 02:32:04 server sshd[6643]: Error encountered
+Nov 18 02:32:26 server systemd[8855]: Configuration updated
+Nov 18 02:35:02 server kernel[6696]: Process started
+Nov 18 02:35:27 server cron[3186]: Service restarted
+Nov 18 02:36:46 server sshd[7363]: Error encountered
+Nov 18 02:36:55 server kernel[6766]: Configuration updated
+Nov 18 02:38:44 server cron[1330]: Configuration updated
+Nov 18 02:39:14 server sshd[9112]: User logged in
+Nov 18 02:40:01 server sshd[2179]: Process started
+Nov 18 02:40:44 server systemd[2087]: Configuration updated
+Nov 18 02:40:03 server kernel[3729]: Process started
+Nov 18 02:41:41 server sshd[5008]: Process started
+Nov 18 02:41:26 server kernel[4118]: Error encountered
+Nov 18 02:43:07 server kernel[5516]: Connection established
+Nov 18 02:45:19 server kernel[7271]: User logged in
+Nov 18 02:45:53 server sshd[6629]: Configuration updated
+Nov 18 02:48:02 server systemd[8048]: Error encountered
+Nov 18 02:47:23 server systemd[6741]: Service restarted
+Nov 18 02:48:09 server kernel[6627]: Configuration updated
+Nov 18 02:51:40 server kernel[7618]: Connection established
+Nov 18 02:51:58 server systemd[5567]: Configuration updated
+Nov 18 02:53:13 server cron[4347]: Configuration updated
+Nov 18 02:53:18 server sshd[4429]: Connection established
+Nov 18 02:54:18 server sshd[1925]: Configuration updated
+Nov 18 02:54:27 server systemd[8986]: Process started
+Nov 18 02:56:36 server sshd[4456]: Service restarted
+Nov 18 02:57:46 server kernel[7194]: Service restarted
+Nov 18 02:56:53 server sshd[2207]: Configuration updated
+Nov 18 02:57:21 server kernel[5471]: Connection established
+Nov 18 03:00:35 server kernel[6133]: User logged in
+Nov 18 03:01:06 server cron[7932]: Error encountered
+Nov 18 03:01:21 server kernel[9710]: Service restarted
+Nov 18 03:01:19 server sshd[5004]: Process started
+Nov 18 03:03:44 server cron[4537]: Connection established
+Nov 18 03:04:22 server systemd[5112]: Service restarted
+Nov 18 03:04:34 server kernel[2682]: Process started
+Nov 18 03:06:11 server cron[2097]: Error encountered
+Nov 18 03:05:51 server kernel[5055]: Configuration updated
+Nov 18 03:06:15 server systemd[6299]: User logged in
+Nov 18 03:07:13 server systemd[2750]: Configuration updated
+Nov 18 03:08:43 server kernel[5642]: Error encountered
+Nov 18 03:09:53 server cron[7790]: Service restarted
+Nov 18 03:09:08 server kernel[8569]: Process started
+Nov 18 03:12:37 server systemd[7507]: Process started
+Nov 18 03:12:12 server sshd[9834]: Connection established
+Nov 18 03:13:49 server kernel[8610]: Error encountered
+Nov 18 03:14:50 server sshd[2010]: Configuration updated
+Nov 18 03:16:08 server systemd[9539]: Service restarted
+Nov 18 03:16:51 server sshd[9715]: User logged in
+Nov 18 03:19:17 server systemd[4455]: Connection established
+Nov 18 03:19:16 server kernel[7973]: Process started
+Nov 18 03:21:20 server kernel[2968]: Service restarted
+Nov 18 03:21:59 server systemd[9405]: Process started
+Nov 18 03:24:57 server kernel[4707]: Process started
+Nov 18 03:24:34 server sshd[1669]: User logged in
+Nov 18 03:25:27 server kernel[4243]: Connection established
+Nov 18 03:27:55 server cron[1236]: Error encountered
+Nov 18 03:28:01 server kernel[1021]: Error encountered
+Nov 18 03:28:53 server cron[9287]: Process started
+Nov 18 03:30:29 server sshd[7886]: Configuration updated
+Nov 18 03:30:24 server kernel[2397]: Service restarted
+Nov 18 03:31:46 server cron[5347]: User logged in
+Nov 18 03:32:26 server kernel[5310]: Error encountered
+Nov 18 03:31:55 server cron[4945]: Error encountered
+Nov 18 03:32:18 server kernel[3524]: User logged in
+Nov 18 03:33:53 server systemd[9498]: Configuration updated
+Nov 18 03:36:09 server sshd[6052]: Connection established
+Nov 18 03:36:07 server systemd[6300]: Service restarted
+Nov 18 03:37:31 server systemd[5743]: Connection established
+Nov 18 03:38:50 server sshd[4236]: Error encountered
+Nov 18 03:38:50 server cron[3826]: Error encountered
+Nov 18 03:40:47 server sshd[6445]: Configuration updated
+Nov 18 03:40:48 server kernel[3912]: Process started
+Nov 18 03:42:26 server systemd[5046]: User logged in
+Nov 18 03:43:21 server sshd[3533]: Error encountered
+Nov 18 03:44:51 server systemd[8088]: Process started
+Nov 18 03:44:33 server cron[6200]: Configuration updated
+Nov 18 03:44:55 server kernel[9921]: Error encountered
+Nov 18 03:48:14 server systemd[2340]: Service restarted
+Nov 18 03:48:37 server kernel[3521]: Connection established
+Nov 18 03:49:14 server cron[8213]: Configuration updated
+Nov 18 03:49:52 server cron[2117]: Configuration updated
+Nov 18 03:49:23 server cron[8760]: Connection established
+Nov 18 03:50:18 server sshd[7613]: Connection established
+Nov 18 03:52:08 server sshd[9683]: Service restarted
+Nov 18 03:53:40 server sshd[4675]: User logged in
+Nov 18 03:56:06 server sshd[5350]: Service restarted
+Nov 18 03:58:09 server cron[9051]: Process started
+Nov 18 03:59:11 server kernel[7007]: Error encountered
+Nov 18 04:00:33 server kernel[7689]: User logged in
+Nov 18 04:01:28 server sshd[2682]: User logged in
+Nov 18 04:02:11 server sshd[7456]: Error encountered
+Nov 18 04:02:57 server systemd[1088]: Connection established
+Nov 18 04:04:37 server sshd[6833]: Process started
+Nov 18 04:04:55 server cron[2919]: Configuration updated
+Nov 18 04:07:17 server sshd[3717]: Service restarted
+Nov 18 04:06:23 server systemd[1613]: Service restarted
+Nov 18 04:09:13 server kernel[8352]: Process started
+Nov 18 04:09:34 server sshd[7803]: Error encountered
+Nov 18 04:09:46 server kernel[1145]: Process started
+Nov 18 04:13:01 server cron[8049]: Process started
+Nov 18 04:13:01 server sshd[8774]: Configuration updated
+Nov 18 04:13:51 server sshd[5494]: Service restarted
+Nov 18 04:15:03 server kernel[4944]: Service restarted
+Nov 18 04:15:44 server kernel[6781]: User logged in
+Nov 18 04:17:52 server cron[6029]: Service restarted
+Nov 18 04:17:12 server sshd[1808]: Service restarted
+Nov 18 04:19:00 server sshd[3920]: User logged in
+Nov 18 04:20:15 server sshd[7311]: Error encountered
+Nov 18 04:18:35 server cron[3017]: Service restarted
+Nov 18 04:19:11 server kernel[2084]: Process started
+Nov 18 04:20:29 server cron[4751]: Error encountered
+Nov 18 04:21:02 server systemd[5096]: Connection established
+Nov 18 04:23:56 server systemd[8661]: User logged in
+Nov 18 04:24:58 server systemd[1115]: Connection established
+Nov 18 04:23:58 server kernel[1206]: Service restarted
+Nov 18 04:24:05 server cron[4166]: User logged in
+Nov 18 04:25:07 server systemd[2125]: Service restarted
+Nov 18 04:27:05 server sshd[5674]: Configuration updated
+Nov 18 04:28:42 server sshd[6503]: Process started
+Nov 18 04:30:55 server cron[8903]: Configuration updated
+Nov 18 04:30:06 server cron[2687]: Service restarted
+Nov 18 04:30:51 server systemd[9022]: Process started
+Nov 18 04:31:41 server kernel[5169]: Configuration updated
+Nov 18 04:33:19 server cron[9066]: Service restarted
+Nov 18 04:33:51 server sshd[9831]: User logged in
+Nov 18 04:35:04 server systemd[8153]: Error encountered
+Nov 18 04:36:25 server kernel[4543]: User logged in
+Nov 18 04:36:23 server kernel[1291]: Process started
+Nov 18 04:39:44 server sshd[8713]: Service restarted
+Nov 18 04:39:34 server kernel[1264]: Connection established
+Nov 18 04:39:28 server systemd[2881]: Process started
+Nov 18 04:39:53 server sshd[6408]: Process started
+Nov 18 04:42:41 server kernel[8297]: Connection established
+Nov 18 04:43:12 server systemd[1073]: Service restarted
+Nov 18 04:44:00 server systemd[9981]: Service restarted
+Nov 18 04:46:11 server cron[1998]: Connection established
+Nov 18 04:46:22 server cron[3440]: Process started
+Nov 18 04:48:01 server cron[1552]: Connection established
+Nov 18 04:48:24 server kernel[5560]: Service restarted
+Nov 18 04:48:37 server cron[6095]: Error encountered
+Nov 18 04:48:58 server sshd[8089]: Error encountered
+Nov 18 04:51:04 server kernel[6687]: Error encountered
+Nov 18 04:53:08 server sshd[3674]: Process started
+Nov 18 04:53:20 server sshd[2502]: Service restarted
+Nov 18 04:54:16 server cron[6046]: Configuration updated
+Nov 18 04:54:41 server sshd[6028]: User logged in
+Nov 18 04:56:39 server kernel[2282]: Error encountered
+Nov 18 04:56:02 server kernel[6882]: Connection established
+Nov 18 04:57:21 server systemd[6240]: Configuration updated
+Nov 18 04:58:52 server kernel[4373]: Process started
+Nov 18 04:58:10 server cron[5668]: Process started
+Nov 18 04:58:24 server systemd[1191]: Process started
+Nov 18 05:00:29 server systemd[1212]: Connection established
+Nov 18 05:00:30 server kernel[1119]: Configuration updated
+Nov 18 05:03:33 server systemd[5213]: Process started
+Nov 18 05:04:41 server cron[1006]: Connection established
+Nov 18 05:06:19 server sshd[7812]: Error encountered
+Nov 18 05:05:19 server systemd[9750]: Connection established
+Nov 18 05:06:48 server cron[8813]: User logged in
+Nov 18 05:08:52 server sshd[1652]: Connection established
+Nov 18 05:09:57 server sshd[2681]: Error encountered
+Nov 18 05:10:23 server kernel[6439]: Connection established
+Nov 18 05:11:10 server cron[6561]: Service restarted
+Nov 18 05:13:19 server kernel[1257]: Connection established
+Nov 18 05:13:57 server cron[8604]: Connection established
+Nov 18 05:12:37 server cron[5896]: Connection established
+Nov 18 05:13:47 server sshd[4916]: Error encountered
+Nov 18 05:15:22 server systemd[7322]: Service restarted
+Nov 18 05:17:54 server systemd[1274]: Configuration updated
+Nov 18 05:18:35 server sshd[1647]: User logged in
+Nov 18 05:18:19 server systemd[3720]: Configuration updated
+Nov 18 05:21:10 server sshd[9069]: Configuration updated
+Nov 18 05:22:26 server sshd[5967]: Connection established
+Nov 18 05:24:24 server cron[5500]: Error encountered
+Nov 18 05:23:50 server kernel[2358]: Service restarted
+Nov 18 05:23:51 server systemd[7966]: Service restarted
+Nov 18 05:25:24 server kernel[1254]: User logged in
+Nov 18 05:27:05 server sshd[2218]: Service restarted
+Nov 18 05:28:16 server sshd[8686]: Process started
+Nov 18 05:26:55 server cron[5454]: Service restarted
+Nov 18 05:27:08 server sshd[2632]: Connection established
+Nov 18 05:30:10 server kernel[3024]: Configuration updated
+Nov 18 05:30:30 server sshd[6458]: Service restarted
+Nov 18 05:31:06 server cron[8824]: Error encountered
+Nov 18 05:31:26 server cron[6096]: Service restarted
+Nov 18 05:32:50 server kernel[9198]: Configuration updated
+Nov 18 05:33:31 server systemd[1829]: Connection established
+Nov 18 05:36:29 server kernel[2579]: Process started
+Nov 18 05:37:28 server kernel[7218]: Service restarted
+Nov 18 05:37:06 server systemd[9389]: Error encountered
+Nov 18 05:39:13 server sshd[5409]: Configuration updated
+Nov 18 05:42:07 server kernel[4800]: Connection established
+Nov 18 05:42:53 server kernel[1946]: Service restarted
+Nov 18 05:44:01 server kernel[5629]: Service restarted
+Nov 18 05:42:56 server sshd[7475]: Process started
+Nov 18 05:43:23 server cron[3581]: Connection established
+Nov 18 05:44:39 server kernel[6476]: Configuration updated
+Nov 18 05:45:58 server systemd[3646]: Configuration updated
+Nov 18 05:47:30 server sshd[6094]: Connection established
+Nov 18 05:48:57 server cron[3478]: Service restarted
+Nov 18 05:50:53 server cron[2490]: User logged in
+Nov 18 05:51:48 server cron[3915]: Configuration updated
+Nov 18 05:52:12 server sshd[2243]: Process started
+Nov 18 05:52:58 server systemd[2013]: Configuration updated
+Nov 18 05:53:03 server cron[5225]: User logged in
+Nov 18 05:54:48 server cron[7161]: Connection established
+Nov 18 05:56:01 server kernel[4928]: Process started
+Nov 18 05:56:46 server sshd[5333]: User logged in
+Nov 18 05:57:12 server sshd[2221]: Service restarted
+Nov 18 05:57:48 server sshd[6769]: Process started
+Nov 18 05:58:04 server cron[8832]: User logged in
+Nov 18 06:00:01 server systemd[6559]: Error encountered
+Nov 18 06:00:28 server sshd[6128]: Process started
+Nov 18 06:00:44 server cron[7947]: Service restarted
+Nov 18 06:02:04 server kernel[6951]: Error encountered
+Nov 18 06:03:40 server cron[4574]: Process started
+Nov 18 06:03:28 server cron[9986]: Service restarted
+Nov 18 06:04:11 server sshd[7720]: Process started
+Nov 18 06:05:47 server sshd[8522]: Error encountered
+Nov 18 06:05:41 server sshd[9780]: Service restarted
+Nov 18 06:06:27 server systemd[6675]: Connection established
+Nov 18 06:07:23 server kernel[3225]: User logged in
+Nov 18 06:07:32 server cron[4994]: Error encountered
+Nov 18 06:09:47 server kernel[4882]: Error encountered
+Nov 18 06:10:21 server systemd[5105]: User logged in
+Nov 18 06:10:17 server systemd[6227]: User logged in
+Nov 18 06:11:45 server cron[1023]: Configuration updated
+Nov 18 06:13:02 server sshd[6906]: Service restarted
+Nov 18 06:14:22 server kernel[9044]: Service restarted
+Nov 18 06:16:06 server kernel[5427]: Error encountered
+Nov 18 06:17:36 server cron[5510]: Connection established
+Nov 18 06:17:18 server systemd[2276]: Error encountered
+Nov 18 06:18:16 server sshd[9755]: Service restarted
+Nov 18 06:18:56 server cron[3907]: User logged in
+Nov 18 06:21:50 server systemd[4698]: Connection established
+Nov 18 06:22:23 server kernel[8462]: Connection established
+Nov 18 06:23:52 server sshd[4523]: Configuration updated
+Nov 18 06:25:27 server sshd[6598]: Connection established
+Nov 18 06:25:33 server kernel[1184]: Error encountered
+Nov 18 06:28:24 server cron[1678]: Service restarted
+Nov 18 06:28:45 server kernel[7616]: User logged in

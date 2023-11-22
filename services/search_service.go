@@ -2,9 +2,9 @@ package services
 
 import (
 	"io"
+	"logseeker/models"
 	"os"
 	"strings"
-	"voltron/models"
 
 	"github.com/rotisserie/eris"
 )
@@ -38,16 +38,11 @@ func (ss *SearchService) Search(request *models.SearchRequest) ([]string, error)
 	filename := request.Filename
 	filename = strings.Replace(filename, "/var/log/", "logs/", 1)
 
-	keywords := []string{}
-	if request.Keywords != "" {
-		keywords = strings.Split(request.Keywords, " ")
-	}
-
-	return SearchFile(filename, lineCount, keywords)
+	return SearchFile(filename, lineCount, request.Keywords)
 }
 
 // SearchFile searches for keywords in the lines from a file
-func SearchFile(filename string, lineCount int, keywords []string) ([]string, error) {
+func SearchFile(filename string, lineCount int, phrase string) ([]string, error) {
 	// Check if file exists before opening it
 	fileInfo, err := os.Stat(filename)
 	if os.IsNotExist(err) {
@@ -101,7 +96,7 @@ func SearchFile(filename string, lineCount int, keywords []string) ([]string, er
 				line := string(buffer[i+1:])
 				if len(line) > 0 {
 					// Check if the keywords are present in the line
-					if checkForKeywords(line, keywords) {
+					if CheckForKeywords(line, phrase) {
 						// Prepend the line to the lines slice
 						lines = append(lines, []string{line}...)
 					}
@@ -116,7 +111,7 @@ func SearchFile(filename string, lineCount int, keywords []string) ([]string, er
 		partialLine = string(buffer)
 	}
 
-	if partialLine != "" && len(lines) < lineCount && checkForKeywords(partialLine, keywords) {
+	if partialLine != "" && len(lines) < lineCount && CheckForKeywords(partialLine, phrase) {
 		lines = append(lines, []string{partialLine}...)
 	}
 
@@ -124,20 +119,13 @@ func SearchFile(filename string, lineCount int, keywords []string) ([]string, er
 }
 
 // Check if one of the keywords exists in the line
-func checkForKeywords(line string, keywords []string) bool {
-	if len(keywords) == 0 {
+func CheckForKeywords(line string, phrase string) bool {
+	if len(phrase) == 0 {
 		return true
 	}
-	m := map[string]bool{}
-	for _, keyword := range keywords {
-		m[strings.ToLower(keyword)] = false
-	}
-	words := strings.Split(line, " ")
-	for _, word := range words {
-		if _, ok := m[strings.ToLower(word)]; ok {
-			return true
-		}
-	}
 
-	return false
+	lowerCaseLine := strings.ToLower(line)
+	lowerCasePhrase := strings.ToLower(phrase)
+
+	return strings.Contains(lowerCaseLine, lowerCasePhrase)
 }

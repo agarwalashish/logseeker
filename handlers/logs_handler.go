@@ -4,10 +4,14 @@ import (
 	"encoding/json"
 	"io"
 	"log"
+	"logseeker/models"
+	"logseeker/services"
 	"net/http"
-	"voltron/models"
-	"voltron/services"
 )
+
+type LogsHandlerInterface interface {
+	SearchRequest(w http.ResponseWriter, r *http.Request)
+}
 
 type LogsHandler struct {
 	BaseHandler
