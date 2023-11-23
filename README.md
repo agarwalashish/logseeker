@@ -4,7 +4,9 @@ This project has been developed as part of Cribl's take home assignment for the 
 ## How to run
 
 ### System requirements 
-The application has been dockerized and so the only dependency to run the application is docker. The application was built and tested using Docker version 4.10.1
+
+1. The application has been dockerized and so the only dependency to run the application is docker. The application was built and tested using Docker version 4.10.1
+2. To run the unit tests, go 1.21+ will be required
 
 ### Generating sample log data
 There is a python script to generate sample log data which is in the /scripts folder. The script can be run using the command - 
@@ -48,7 +50,13 @@ go test ./...
 
 Future improvements to this project include - 
 
-1. Adding support for streaming of logs
+### Custom Parsers
+This will allow users to provide a parser type (e.g `AWS VPC Flow Logs`) as an optional input parameter. The service can then attempt to parse the log file based on the file format and the client calling the API will be able to filter based on more fields.
 
-Authentication
-Currently, there is no way to specify the org id before we get the logs. 
+
+### Authentication
+Integrate the service with either a custom authentication service or an external one (e.g Auth0). Additionally, logs should also be separated for different organizations and a user should only be able to make the api requests to the organization that they are a member of.
+
+### Streaming
+Implement web sockets for streaming. This will allow the client to enter a filename and observe the events being written to it in real time.
+

@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/cors"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 )
@@ -19,6 +20,16 @@ func main() {
 
 func setupRouter() *chi.Mux {
 	r := chi.NewRouter()
+	cors := cors.New(cors.Options{
+		AllowedOrigins:   []string{"http://localhost:3000"}, // Set to the frontend's URL
+		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowedHeaders:   []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token"},
+		ExposedHeaders:   []string{},
+		AllowCredentials: true,
+		MaxAge:           300,
+	})
+
+	r.Use(cors.Handler)
 
 	// Initialize the services
 	searchService := services.NewSearchService()
