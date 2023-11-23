@@ -2,23 +2,31 @@ package main
 
 import (
 	"logseeker/handlers"
+	"logseeker/services"
 	"net/http"
+	"os"
 
 	"github.com/go-chi/chi/v5"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
+	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
 )
 
 func main() {
-	logger := setupLogger()
-	router := setupRouter(logger)
+	setupLogger()
+	router := setupRouter()
 	http.ListenAndServe(":8080", router)
 }
 
-func setupRouter(l *zap.Logger) *chi.Mux {
+func setupRouter() *chi.Mux {
 	r := chi.NewRouter()
 
-	var logsHandler handlers.LogsHandlerInterface = handlers.NewLogsHandler(l)
+	// Initialize the services
+	searchService := services.NewSearchService()
+
+	// Initialize the handlers
+	var logsHandler handlers.LogsHandlerInterface = handlers.NewLogsHandler(searchService)
+
+	// Initialize the routes
 	r.Route("/logs", func(r chi.Router) {
 		r.Post("/search", logsHandler.SearchRequest)
 	})
@@ -26,33 +34,6 @@ func setupRouter(l *zap.Logger) *chi.Mux {
 	return r
 }
 
-func setupLogger() *zap.Logger {
-	config := zap.Config{
-		Encoding:         "console", // or "json"
-		Level:            zap.NewAtomicLevelAt(zapcore.ErrorLevel),
-		OutputPaths:      []string{"stdout"},
-		ErrorOutputPaths: []string{"stderr"},
-		EncoderConfig: zapcore.EncoderConfig{
-			MessageKey:     "message",
-			LevelKey:       "level",
-			TimeKey:        "time",
-			NameKey:        "logger",
-			CallerKey:      "caller",
-			StacktraceKey:  "stacktrace",
-			LineEnding:     zapcore.DefaultLineEnding,
-			EncodeLevel:    zapcore.CapitalLevelEncoder,
-			EncodeTime:     zapcore.ISO8601TimeEncoder,
-			EncodeDuration: zapcore.SecondsDurationEncoder,
-			EncodeCaller:   zapcore.ShortCallerEncoder,
-		},
-		DisableStacktrace: true,
-	}
-
-	logger, err := config.Build()
-	if err != nil {
-		panic(err)
-	}
-	defer logger.Sync()
-
-	return logger
+func setupLogger() {
+	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
 }

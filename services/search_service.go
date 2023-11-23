@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"go.uber.org/zap"
+	"github.com/rs/zerolog/log"
 )
 
 type SearchServiceInterface interface {
@@ -15,13 +15,10 @@ type SearchServiceInterface interface {
 }
 
 type SearchService struct {
-	logger *zap.Logger
 }
 
-func NewSearchService(logger *zap.Logger) *SearchService {
-	return &SearchService{
-		logger: logger,
-	}
+func NewSearchService() *SearchService {
+	return &SearchService{}
 }
 
 const (
@@ -31,7 +28,7 @@ const (
 
 func (ss *SearchService) Search(request *models.SearchRequest) ([]string, *models.Error) {
 	if request == nil || request.Filename == "" {
-		ss.logger.Error("filename is missing from request")
+		log.Error().Msg("filename is missing from request")
 		return nil, &models.Error{Message: "filename is missing", Code: http.StatusBadRequest}
 	}
 
