@@ -9,8 +9,8 @@ import (
 type BaseHandler struct {
 }
 
-// SendJSON sends the JSON output of the http request to the client
-func (bh *BaseHandler) SendJSON(w http.ResponseWriter, r *http.Request, v interface{}, code int) {
+// WriteJSON sends the JSON output of the http request to the client
+func (bh *BaseHandler) WriteJSON(w http.ResponseWriter, r *http.Request, v interface{}, code int) {
 	// Set the headers of the http response
 	w.Header().Set("Content-Type", "application/json")
 	w.Header().Set("Cache-Control", "no-store")

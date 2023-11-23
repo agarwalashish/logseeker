@@ -3,21 +3,25 @@ package services
 import (
 	"io"
 	"logseeker/models"
+	"net/http"
 	"os"
 	"strings"
 
-	"github.com/rotisserie/eris"
+	"go.uber.org/zap"
 )
 
 type SearchServiceInterface interface {
-	Search(request *models.SearchRequest) ([]string, error)
+	Search(request *models.SearchRequest) ([]string, *models.Error)
 }
 
 type SearchService struct {
+	logger *zap.Logger
 }
 
-func NewSearchService() *SearchService {
-	return &SearchService{}
+func NewSearchService(logger *zap.Logger) *SearchService {
+	return &SearchService{
+		logger: logger,
+	}
 }
 
 const (
@@ -25,9 +29,10 @@ const (
 	chunkSize        = 1024
 )
 
-func (ss *SearchService) Search(request *models.SearchRequest) ([]string, error) {
+func (ss *SearchService) Search(request *models.SearchRequest) ([]string, *models.Error) {
 	if request == nil || request.Filename == "" {
-		return nil, eris.Errorf("missing filename")
+		ss.logger.Error("filename is missing from request")
+		return nil, &models.Error{Message: "filename is missing", Code: http.StatusBadRequest}
 	}
 
 	lineCount := defaultLineCount
@@ -35,30 +40,27 @@ func (ss *SearchService) Search(request *models.SearchRequest) ([]string, error)
 		lineCount = request.NumLines
 	}
 
-	// filename := request.Filename
-	// filename = strings.Replace(filename, "/var/log/", "/app/logs/", 1)
-
 	return SearchFile(request.Filename, lineCount, request.Keywords)
 }
 
 // SearchFile searches for keywords in the lines from a file
-func SearchFile(filename string, lineCount int, phrase string) ([]string, error) {
+func SearchFile(filename string, lineCount int, phrase string) ([]string, *models.Error) {
 	// Check if file exists before opening it
 	fileInfo, err := os.Stat(filename)
 	if os.IsNotExist(err) {
-		return nil, eris.New("file does not exist")
+		return nil, &models.Error{Message: "file does not exist", Code: http.StatusBadRequest}
 	}
 
 	// Open the file for reading
 	file, err := os.Open(filename)
 	if err != nil {
-		return nil, eris.Wrap(err, "error opening file")
+		return nil, &models.Error{Message: "error opening file", Code: http.StatusInternalServerError}
 	}
 	defer file.Close()
 
 	fileSize := fileInfo.Size()
 	if fileSize == 0 {
-		return nil, eris.New("file is empty")
+		return nil, &models.Error{Message: "file is empty", Code: http.StatusBadRequest}
 	}
 
 	var lines []string
@@ -79,11 +81,11 @@ func SearchFile(filename string, lineCount int, phrase string) ([]string, error)
 		buffer := make([]byte, sizeToRead)
 		_, err := file.Seek(startPos, io.SeekStart)
 		if err != nil {
-			return nil, err
+			return nil, &models.Error{Message: err.Error(), Code: http.StatusInternalServerError}
 		}
 		_, err = file.Read(buffer)
 		if err != nil {
-			return nil, err
+			return nil, &models.Error{Message: err.Error(), Code: http.StatusInternalServerError}
 		}
 
 		// Update the current position in the file

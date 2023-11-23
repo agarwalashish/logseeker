@@ -38,6 +38,11 @@ curl --location 'http://localhost:8080/logs/search' \
 * `numLines` is the number of lines that will be returned. This is an optional field and by default, the last 10 lines will be returned
 * `keywords` are the keywords that will be searched for. This is an optional field
 
+### Running all unit tests
+To run all unit tests, run the command -
+```
+go test ./...
+```
 
 ## Future work
 

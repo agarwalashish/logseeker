@@ -41,14 +41,14 @@ func TestSearchFileDoesNotExist(t *testing.T) {
 	filename := "/var/log/invalid_file.txt"
 	lines, err := SearchFile(filename, 10, "dummy phrase")
 	assert.Nil(t, lines)
-	assert.Equal(t, "file does not exist", err.Error())
+	assert.Equal(t, "file does not exist", err.Message)
 }
 
 func TestSearchEmptyFile(t *testing.T) {
 	filename := "../tests/data/empty_file.log"
 	lines, err := SearchFile(filename, 10, "dummy phrase")
 	assert.Nil(t, lines)
-	assert.Equal(t, "file is empty", err.Error())
+	assert.Equal(t, "file is empty", err.Message)
 }
 
 func TestCheckForKeywords(t *testing.T) {
