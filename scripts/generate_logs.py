@@ -23,6 +23,7 @@ def generate_log_line(timestamp):
 
 def generate_log_file(filename, size_in_mb):
     target_size = size_in_mb * 1024 * 1024  # Convert MB to Bytes
+    print("target size: ", target_size)
     current_size = 0
     start_time = time.time()
 
@@ -40,4 +41,4 @@ filename = input("Enter the filename for the log file: ")
 size_in_mb = float(input("Enter the size of the file in MB: "))
 
 # Usage
-generate_log_file(f"../logs/{filename}", 1)  # Generates a 1GB log file
+generate_log_file(f"./logs/{filename}", size_in_mb)
